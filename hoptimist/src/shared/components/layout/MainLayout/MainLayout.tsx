@@ -1,14 +1,14 @@
 import type { FC } from "react";
 import { Outlet } from "react-router-dom";
-import { AppFooter } from "../AppFooter/AppFooter";
-import { AppHeader } from "../AppHeader/AppHeader";
+import { Footer } from "../Footer/Footer";
+import { Header } from "../Header/Header";
 
 export const MainLayout: FC = () => {
   return (
     <div style={{ minHeight: "100vh" }}>
-      <AppHeader></AppHeader>
+      <Header></Header>
       <Outlet />
-      <AppFooter></AppFooter>
+      <Footer></Footer>
     </div>
   );
 };
