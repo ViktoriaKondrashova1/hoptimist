@@ -1,14 +1,25 @@
 import type { FC } from "react";
 import { Outlet } from "react-router-dom";
-import { Footer } from "../Footer/Footer";
-import { Header } from "../Header/Header";
+import { Layout } from "antd";
+import { AppFooter } from "../AppFooter/AppFooter";
+import { AppHeader } from "../AppHeader/AppHeader";
+
+const { Content } = Layout;
 
 export const MainLayout: FC = () => {
   return (
-    <div style={{ minHeight: "100vh" }}>
-      <Header></Header>
-      <Outlet />
-      <Footer></Footer>
-    </div>
+    <Layout style={{ minHeight: "100vh" }}>
+      <AppHeader />
+      <Content
+        style={{
+          margin: "24px 16px",
+          padding: 24,
+          minHeight: 280,
+        }}
+      >
+        <Outlet />
+      </Content>
+      <AppFooter />
+    </Layout>
   );
 };
