@@ -3,6 +3,7 @@ import type { ThemeConfig } from "antd";
 export const theme = {
   token: {
     colorPrimary: "#d35917",
+    fontFamily: "Barlow, sans-serif",
   },
   components: {
     Notification: {

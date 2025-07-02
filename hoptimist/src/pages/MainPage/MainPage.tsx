@@ -1,5 +1,10 @@
 import type { FC } from "react";
 
 export const MainPage: FC = () => {
-  return <>Main</>;
+  return (
+    <>
+      <h1>Main Page</h1>
+      <p>Text</p>
+    </>
+  );
 };
