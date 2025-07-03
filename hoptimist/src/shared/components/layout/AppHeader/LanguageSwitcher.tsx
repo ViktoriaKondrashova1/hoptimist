@@ -9,6 +9,11 @@ export const LanguageSwitcher = () => {
       value={language}
       onChange={(e) => setLanguage(e.target.value)}
       size="small"
+      style={{
+        background: "rgba(0, 0, 0, 0.04)",
+        borderRadius: "4px",
+        padding: "4px",
+      }}
     >
       <Radio.Button
         value="en"
@@ -18,7 +23,10 @@ export const LanguageSwitcher = () => {
       </Radio.Button>
       <Radio.Button
         value="ru"
-        style={{ backgroundColor: "transparent", border: "none" }}
+        style={{
+          backgroundColor: "transparent",
+          border: "none",
+        }}
       >
         RU
       </Radio.Button>

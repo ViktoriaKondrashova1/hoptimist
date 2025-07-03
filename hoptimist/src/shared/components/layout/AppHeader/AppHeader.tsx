@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Layout, Flex } from "antd";
+import { Layout, Flex, Badge } from "antd";
 import type { MenuProps } from "antd";
 import { AppHeaderTitle } from "@/shared/components/layout/AppHeader/AppHeaderTitle";
 import { AppHeaderMenu } from "@/shared/components/layout/AppHeader/AppHeaderMenu";
@@ -29,11 +29,22 @@ const items: MenuProps["items"] = [
   {
     key: APP_PATHS.CART_PATH,
     icon: (
-      <ShoppingCartOutlined
+      <Badge
+        showZero
+        size="small"
+        count={0}
         style={{
-          fontSize: "18px",
+          backgroundColor: "#d35917",
+          alignItems: "center",
+          fontSize: "10px",
         }}
-      />
+      >
+        <ShoppingCartOutlined
+          style={{
+            fontSize: "18px",
+          }}
+        />{" "}
+      </Badge>
     ),
   },
 ];
