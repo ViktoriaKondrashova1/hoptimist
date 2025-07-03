@@ -9,4 +9,5 @@ export const APP_PATHS = {
   NOT_FOUND_PATH: "*",
   PRODUCT_PATH: "product/:productId",
   PROFILE_PATH: "profile",
+  BLOG_PATH: "blog",
 };
