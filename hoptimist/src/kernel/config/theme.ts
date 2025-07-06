@@ -10,6 +10,11 @@ export const theme = {
       colorError: "#ff4d4f",
       fontSize: 16,
     },
+    Menu: {
+      itemHoverColor: "#d35917",
+      activeBarHeight: 0,
+      fontSize: 16,
+    },
     Button: {
       colorPrimaryTextHover: "#fff",
     },

@@ -1,5 +1,5 @@
 import type { FC } from "react";
 
-export const Footer: FC = () => {
+export const AppFooter: FC = () => {
   return <>Footer</>;
 };

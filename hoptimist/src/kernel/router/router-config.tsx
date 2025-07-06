@@ -9,6 +9,7 @@ import { NotFoundPage } from "@/pages/NotFoundPage/NotFoundPage";
 import { ProductPage } from "@/pages/ProductPage/ProductPage";
 import { RegisterPage } from "@/pages/RegisterPage/RegisterPage";
 import { UserProfilePage } from "@/pages/UserProfilePage/UserProfilePage";
+import {BlogPage} from "@/pages/BlogPage/BlogPage"
 import { APP_PATHS } from "./route-paths";
 
 import { createBrowserRouter } from "react-router-dom";
@@ -59,6 +60,10 @@ export const router = createBrowserRouter([
       {
         path: APP_PATHS.NOT_FOUND_PATH,
         element: <NotFoundPage />,
+      },
+       {
+        path: APP_PATHS.BLOG_PATH,
+        element: <BlogPage />,
       },
     ],
   },
