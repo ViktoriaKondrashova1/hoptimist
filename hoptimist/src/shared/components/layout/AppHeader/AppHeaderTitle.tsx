@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { appName } from "@/shared/constants/constants";
+import { APP_NAME } from "@/shared/constants/constants";
 import { APP_PATHS } from "@/kernel/router/route-paths";
 import { AppTitle } from "@/shared/components/ui/AppTitle/AppTitle";
 
@@ -12,7 +12,7 @@ export const AppHeaderTitle = React.memo(() => {
       style={{ margin: 0, cursor: "pointer", fontWeight: 200 }}
       onClick={() => navigate(APP_PATHS.BASE_PATH)}
     >
-      {appName}
+      {APP_NAME}
     </AppTitle>
   );
 });

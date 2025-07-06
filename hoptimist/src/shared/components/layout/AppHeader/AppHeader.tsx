@@ -8,6 +8,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { AppButton } from "@/shared/components/ui/AppButton/AppButton";
 import { AppHeaderMenu } from "./AppHeaderMenu";
 import type { BaseComponent } from "@/shared/types/common-types";
+import { MAIN_COLOR } from "@/shared/constants/constants";
 
 interface Props extends BaseComponent {}
 
@@ -15,7 +16,7 @@ const { Header } = Layout;
 
 const userName = "Victoria"; // временное значение
 
-const isAuth = true; // временное значение
+const isAuth = false; // временное значение
 
 const items: MenuProps["items"] = [
   {
@@ -46,16 +47,12 @@ const items: MenuProps["items"] = [
         size="small"
         count={0}
         style={{
-          backgroundColor: "#d35917",
+          backgroundColor: MAIN_COLOR,
           alignItems: "center",
           fontSize: "10px",
         }}
       >
-        <ShoppingCartOutlined
-          style={{
-            fontSize: "18px",
-          }}
-        />{" "}
+        <ShoppingCartOutlined />
       </Badge>
     ),
   },
