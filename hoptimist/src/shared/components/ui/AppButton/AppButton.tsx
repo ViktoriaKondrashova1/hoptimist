@@ -1,0 +1,18 @@
+import type { ButtonProps } from "antd";
+import type { FC } from "react";
+import { Button } from "antd";
+import type { BaseComponent } from "@/shared/types/common-types";
+
+interface Props extends ButtonProps, BaseComponent {}
+
+export const AppButton: FC<Props> = ({
+  children,
+  testId = "button",
+  ...rest
+}) => {
+  return (
+    <Button data-testid={testId} {...rest}>
+      {children}
+    </Button>
+  );
+};
