@@ -29,7 +29,7 @@ export const AppHeaderMenu: FC<Props> = ({
       style={{
         background: "inherit",
         borderBottom: "none",
-        borderRight: "none"
+        borderRight: "none",
       }}
       {...rest}
     />
