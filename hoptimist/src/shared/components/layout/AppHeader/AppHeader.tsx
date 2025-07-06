@@ -8,7 +8,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { AppButton } from "@/shared/components/ui/AppButton/AppButton";
 import { AppHeaderMenu } from "./AppHeaderMenu";
 import type { BaseComponent } from "@/shared/types/common-types";
-import { MAIN_COLOR } from "@/shared/constants/constants";
+import { theme } from '@/kernel/config/theme'
 
 interface Props extends BaseComponent {}
 
@@ -47,7 +47,7 @@ const items: MenuProps["items"] = [
         size="small"
         count={0}
         style={{
-          backgroundColor: MAIN_COLOR,
+          backgroundColor: theme.token.colorPrimary,
           alignItems: "center",
           fontSize: "10px",
         }}
