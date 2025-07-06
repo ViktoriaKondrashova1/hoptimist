@@ -1,13 +1,21 @@
 import type { FC } from "react";
-import { Layout, Flex, Badge } from "antd";
+import { Layout, Flex, Badge, Popover } from "antd";
 import type { MenuProps } from "antd";
 import { AppHeaderTitle } from "@/shared/components/layout/AppHeader/AppHeaderTitle";
-import { AppHeaderMenu } from "@/shared/components/layout/AppHeader/AppHeaderMenu";
-import { ShoppingCartOutlined } from "@ant-design/icons";
+import { ShoppingCartOutlined, UserOutlined } from "@ant-design/icons";
 import { APP_PATHS } from "@/kernel/router/route-paths";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { AppButton } from "@/shared/components/ui/AppButton/AppButton";
+import { AppHeaderMenu } from "./AppHeaderMenu";
+import type { BaseComponent } from "@/shared/types/common-types";
+
+interface Props extends BaseComponent {}
 
 const { Header } = Layout;
+
+const userName = "Victoria"; // временное значение
+
+const isAuth = true; // временное значение
 
 const items: MenuProps["items"] = [
   {
@@ -18,14 +26,18 @@ const items: MenuProps["items"] = [
     key: APP_PATHS.BLOG_PATH,
     label: "BLOG",
   },
-  {
-    key: APP_PATHS.LOGIN_PATH,
-    label: "LOG IN",
-  },
-  {
-    key: APP_PATHS.REGISTER_PATH,
-    label: "SIGN UP",
-  },
+  ...(!isAuth
+    ? [
+        {
+          key: APP_PATHS.LOGIN_PATH,
+          label: "LOG IN",
+        },
+        {
+          key: APP_PATHS.REGISTER_PATH,
+          label: "SIGN UP",
+        },
+      ]
+    : []),
   {
     key: APP_PATHS.CART_PATH,
     icon: (
@@ -49,15 +61,39 @@ const items: MenuProps["items"] = [
   },
 ];
 
-export const AppHeader: FC = () => {
+const userMenuItems: MenuProps["items"] = [
+  {
+    key: APP_PATHS.PROFILE_PATH,
+    label: "My Profile",
+  },
+  {
+    key: APP_PATHS.BASE_PATH,
+    label: "Log Out",
+  },
+];
+
+export const AppHeader: FC<Props> = ({ testId = "header" }) => {
   return (
     <Header
+      data-testid={testId}
       style={{ background: "inherit", position: "sticky", top: 0, zIndex: 1 }}
     >
       <Flex justify="space-between" align="center" style={{ height: "100%" }}>
         <AppHeaderTitle />
         <Flex align="center" style={{ height: "100%" }}>
-          <AppHeaderMenu items={items} />
+          <AppHeaderMenu items={items} mode="horizontal" />
+          {isAuth && (
+            <Popover
+              content={<AppHeaderMenu items={userMenuItems} />}
+              title={`Hello, ${userName}!`}
+            >
+              <AppButton
+                type="text"
+                style={{ marginRight: "16px" }}
+                icon={<UserOutlined />}
+              />
+            </Popover>
+          )}
           <LanguageSwitcher />
         </Flex>
       </Flex>
