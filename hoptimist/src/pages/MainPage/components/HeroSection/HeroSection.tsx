@@ -11,13 +11,23 @@ interface Props extends BaseComponent {}
 const { useBreakpoint } = Grid;
 
 export const HeroSection: FC<Props> = ({ testId = "hero-section" }) => {
-  const screens = useBreakpoint()
+  const screens = useBreakpoint();
+
+  const heroSectionStyle = {
+    paddingLeft: screens.md ? "15%" : "0",
+    justifyContent: screens.md ? "flex-start" : "center",
+  };
+
+  const motoStyle = {
+    fontSize: screens.sm ? "xx-large" : "large",
+    marginTop: screens.sm ? "100px" : "20px",
+  };
 
   return (
-    <div data-testid={testId} className="hero-section">
+    <div data-testid={testId} className="hero-section" style={heroSectionStyle}>
       <Space direction="vertical" size="large">
         <AppTitle>{APP_NAME}</AppTitle>;
-        <AppText>Craft Beer Spoken Here</AppText>
+        <AppText style={motoStyle}>Craft Beer Spoken Here</AppText>
       </Space>
     </div>
   );

@@ -4,7 +4,6 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  padding-left: 15%;
   color: white;
   position: relative;
   z-index: 0;
@@ -32,12 +31,12 @@
     font-size: 220px;
     max-width: 550px;
     line-height: 0.5;
+    margin: 0;
   }
 
   span {
     background-color: white;
     padding: 5px 10px;
     float: right;
-    font-size: xx-large;
   }
 }
