@@ -17,6 +17,10 @@ export const theme = {
     },
     Button: {
       colorPrimaryTextHover: "#fff",
+      colorPrimary: "#001529",
+    },
+    Typography: {
+      fontWeightStrong: 200,
     },
   },
 } satisfies ThemeConfig;

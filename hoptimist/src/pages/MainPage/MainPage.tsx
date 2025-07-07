@@ -1,10 +1,10 @@
 import type { FC } from "react";
+import { HeroSection } from "./components/HeroSection/HeroSection";
 
 export const MainPage: FC = () => {
   return (
     <>
-      <h1>Main Page</h1>
-      <p>Text</p>
+      <HeroSection />
     </>
   );
 };
