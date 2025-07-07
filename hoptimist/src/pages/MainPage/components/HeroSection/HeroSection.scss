@@ -23,10 +23,21 @@
     z-index: -1;
   }
 
+  .ant-space {
+    width: inherit;
+  }
+
   h1 {
     color: variables.$accent-color;
     font-size: 220px;
     max-width: 550px;
     line-height: 0.5;
+  }
+
+  span {
+    background-color: white;
+    padding: 5px 10px;
+    float: right;
+    font-size: xx-large;
   }
 }
