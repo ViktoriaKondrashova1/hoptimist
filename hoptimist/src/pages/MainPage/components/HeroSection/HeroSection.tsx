@@ -20,7 +20,7 @@ export const HeroSection: FC<Props> = ({ testId = "hero-section" }) => {
 
   const motoStyle = {
     fontSize: screens.sm ? "xx-large" : "large",
-    marginTop: screens.sm ? "100px" : "20px",
+    marginTop: screens.sm ? "150px" : "20px",
   };
 
   return (
