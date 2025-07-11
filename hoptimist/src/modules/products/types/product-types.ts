@@ -1,15 +1,23 @@
+import { Category } from "../../categories/types/category-types";
+import { Brewery } from "../../breweries/types/brewery-types";
+
 export interface Product {
-  id: number;
-  title: string;
-  category: string;
+  ABV: number;
+  IBU: number;
+  averageRating: number;
+  brewery: Brewery;
+  breweryId: string;
+  categories: Category[];
+  commentsCount: number;
   country: string;
-  brewery: string;
-  ABV: string;
-  IBU: string;
-  price: {
-    amount: string,
-    discount?: string
-  };
+  createdAt: string;
   description: string;
+  discount: number;
+  id: string;
   images: string[];
+  isDiscount: boolean;
+  offPercent: number;
+  price: number;
+  title: string;
+  updatedAt: string;
 }
