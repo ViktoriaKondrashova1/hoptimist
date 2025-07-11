@@ -28,6 +28,7 @@ export const AppFooter: FC<Props> = ({ testId = "footer", ...rest }) => {
     { key: APP_PATHS.CATALOG_PATH, label: "CATALOG" },
     { key: APP_PATHS.BLOG_PATH, label: "BLOG" },
     { key: APP_PATHS.CART_PATH, label: "CART" },
+    { key: APP_PATHS.ABOUT_PATH, label: "ABOUT" },
   ];
 
   const media = [

@@ -1,15 +1,15 @@
 import { ErrorBoundary } from "@/shared/components/layout/ErrorBoundary/ErrorBoundary";
 import { MainLayout } from "@/shared/components/layout/MainLayout/MainLayout";
-import { AboutPage } from "@/pages/AboutPage/AboutPage";
-import { CartPage } from "@/pages/CartPage/CartPage";
-import { CatalogPage } from "@/pages/CatalogPage/CatalogPage";
-import { LoginPage } from "@/pages/LoginPage/LoginPage";
-import { MainPage } from "@/pages/MainPage/MainPage";
-import { NotFoundPage } from "@/pages/NotFoundPage/NotFoundPage";
-import { ProductPage } from "@/pages/ProductPage/ProductPage";
-import { RegisterPage } from "@/pages/RegisterPage/RegisterPage";
-import { UserProfilePage } from "@/pages/UserProfilePage/UserProfilePage";
-import {BlogPage} from "@/pages/BlogPage/BlogPage"
+import { AboutPage } from "@/pages/AboutPage";
+import { CartPage } from "@/pages/CartPage";
+import { CatalogPage } from "@/pages/CatalogPage";
+import { LoginPage } from "@/pages/LoginPage";
+import { MainPage } from "@/pages/MainPage";
+import { NotFoundPage } from "@/pages/NotFoundPage";
+import { ProductPage } from "@/pages/ProductPage";
+import { RegisterPage } from "@/pages/RegisterPage";
+import { UserProfilePage } from "@/pages/UserProfilePage";
+import { BlogPage } from "@/pages/BlogPage";
 import { APP_PATHS } from "./route-paths";
 
 import { createBrowserRouter } from "react-router-dom";
@@ -61,7 +61,7 @@ export const router = createBrowserRouter([
         path: APP_PATHS.NOT_FOUND_PATH,
         element: <NotFoundPage />,
       },
-       {
+      {
         path: APP_PATHS.BLOG_PATH,
         element: <BlogPage />,
       },

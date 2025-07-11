@@ -9,7 +9,7 @@ export const AppHeaderTitle = React.memo(() => {
 
   return (
     <AppTitle
-      style={{ margin: 0, cursor: "pointer", fontWeight: 200 }}
+      style={{ margin: 0, cursor: "pointer"}}
       onClick={() => navigate(APP_PATHS.BASE_PATH)}
     >
       {APP_NAME}
