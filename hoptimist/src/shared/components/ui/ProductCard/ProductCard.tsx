@@ -33,26 +33,25 @@ export const ProductCard: FC<Props> = ({
         }
         description={
           <div className="product-description">
-            <div className="brewery">{product.brewery}</div>
-            <div className="category">{product.category}</div>
+            <div className="brewery">{product.brewery.name}</div>
+            <div className="category">{product.categories[0].name}</div>
             <Flex
               justify="space-between"
               align="center"
               className="price-section"
             >
               <div className="price">
-                {product.price.discount !== null &&
-                product.price.discount !== "" ? (
+                {product.isDiscount ? (
                   <Flex gap="6px">
                     <span className="original-price">
-                      {product.price.amount}
+                      {`$${product.price}`}
                     </span>
                     <span className="discount-price">
-                      {product.price.discount}
+                      {`$${product.discount}`}
                     </span>
                   </Flex>
                 ) : (
-                  product.price.amount
+                  `$${product.price}`
                 )}
               </div>
               <Flex gap="small">
