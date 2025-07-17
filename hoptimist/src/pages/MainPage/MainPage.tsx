@@ -6,6 +6,7 @@ import { Product } from "@/modules/products/types/product-types";
 import {useRequest} from "@/shared/hooks/use-request"
 import {PromocodeSection} from "@/pages/MainPage/components/PromocodeSection/PromocodeSection"
 import {APP_NAME, PROMOCODE_TEXT} from "@/shared/constants/constants"
+import {MainPageGrid} from "./components/GridSection/GridSection" 
 
 export const MainPage: FC = () => {
   const {data: popularProducts} = useRequest<Product[]>(getFeaturedProducts)
@@ -15,6 +16,7 @@ export const MainPage: FC = () => {
       <HeroSection />
       <ProductLineup title="POPULAR BEERS" products={popularProducts} />
       <PromocodeSection promocode={APP_NAME} promocodeText={PROMOCODE_TEXT}/>
+      <MainPageGrid />
     </>
   );
 };
