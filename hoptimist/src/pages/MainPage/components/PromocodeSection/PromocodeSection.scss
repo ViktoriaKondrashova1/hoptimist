@@ -1,0 +1,24 @@
+.promocode {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: transparent;
+
+    .code {
+        font-size: 18px;
+        background-color: white;
+        padding: 4px 10px; 
+        border-radius: 4px;
+    }
+
+    button {
+        height: auto;
+        text-transform: uppercase;
+        padding: 5px;
+        box-shadow: none;
+    }
+
+    h4 {
+        font-size: 34px;
+    }
+}

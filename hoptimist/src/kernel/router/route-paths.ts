@@ -10,4 +10,5 @@ export const APP_PATHS = {
   PRODUCT_PATH: "product/:productId",
   PROFILE_PATH: "profile",
   BLOG_PATH: "blog",
+  FAVORITES_PATH: "favorites"
 };

@@ -1,9 +1,9 @@
-import { apiEndpoint } from "@/shared/constants/constants";
+import { API_ENDPOINT } from "@/shared/constants/constants";
 import { Product } from "@/modules/products/types/product-types";
 
 export const getFeaturedProducts = async (): Promise<Product[]> => {
   try {
-    const response = await fetch(`${apiEndpoint}/products/featured`);
+    const response = await fetch(`${API_ENDPOINT}/products/featured`);
     const jsonData = await response.json();
     return jsonData.data;
   } catch (err) {
