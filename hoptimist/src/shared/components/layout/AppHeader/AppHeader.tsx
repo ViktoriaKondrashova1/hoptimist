@@ -19,7 +19,7 @@ const { useBreakpoint } = Grid
 
 const userName = "Victoria"; // временное значение
 
-const isAuth = true; // временное значение
+const isAuth = false; // временное значение
 
 const items: MenuProps["items"] = [
   {

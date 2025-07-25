@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import {BaseComponent} from "@/shared/types/common-types"
-import {App as AntApp, Card, Space, Flex, Grid} from "antd"
+import {App as AntApp, Card, Space, Flex, Grid, Divider} from "antd"
 import {AppTitle} from "@/shared/components/ui/AppTitle/AppTitle"
 import {AppText} from "@/shared/components/ui/AppText/AppText"
 import {AppButton} from "@/shared/components/ui/AppButton/AppButton"
@@ -30,13 +30,15 @@ export const PromocodeSection: FC<Props> = ({testId = 'promocode', promocode, pr
       data-testid={testId}
       className="promocode"
     >
+      <Divider />
       <Space direction="vertical" size="small">
         <AppTitle level={4}>{promocodeText}</AppTitle>
-        <Flex vertical={!screens.md} gap="small" justify="center">
+        <Flex vertical={!screens.md} gap="middle" justify="center">
           <AppText className="code" strong>{promocode}</AppText>
           <AppButton type="primary"  onClick={copyPromocode}>Copy Code</AppButton>
         </Flex>
       </Space>
+      <Divider />
     </Card>
   );
 };
