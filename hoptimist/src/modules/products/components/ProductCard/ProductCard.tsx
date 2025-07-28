@@ -3,8 +3,8 @@ import type { Product } from "@/modules/products/types/product-types";
 import type { BaseComponent } from "@/shared/types/common-types";
 import { Card, Flex } from "antd";
 import Meta from "antd/es/card/Meta";
-import { AppTitle } from "../AppTitle/AppTitle";
-import { ProductCardButton } from "@/shared/components/ui/ProductCardButton/ProductCardButton";
+import { AppTitle } from "../../../../shared/components/ui/AppTitle/AppTitle";
+import { ProductCardButton } from "@/modules/products/components/ProductCardButton/ProductCardButton";
 import { PlusOutlined, HeartOutlined } from "@ant-design/icons";
 import "./ProductCard.scss";
 

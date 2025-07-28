@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { HeroSection } from "./components/HeroSection/HeroSection";
-import { ProductLineup } from "@/shared/components/ui/ProductLineup/ProductLineup";
-import {getFeaturedProducts} from "@/modules/products/api/products-api"
+import { ProductLineup } from "@/modules/products/components/ProductLineup/ProductLineup";
+import {getFeaturedProducts} from "@/modules/products/api/getFeaturedProducts"
 import { Product } from "@/modules/products/types/product-types";
 import {useRequest} from "@/shared/hooks/use-request"
 import {PromocodeSection} from "@/pages/MainPage/components/PromocodeSection/PromocodeSection"
