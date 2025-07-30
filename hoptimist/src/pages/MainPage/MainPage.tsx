@@ -3,7 +3,7 @@ import { HeroSection } from "./components/HeroSection/HeroSection";
 import { ProductLineup } from "@/modules/products/components/ProductLineup/ProductLineup";
 import {getFeaturedProducts} from "@/modules/products/api/getFeaturedProducts"
 import { Product } from "@/modules/products/types/product-types";
-import {useRequest} from "@/shared/hooks/use-request"
+import {useRequest} from "@/shared/hooks/useRequest"
 import {PromocodeSection} from "@/pages/MainPage/components/PromocodeSection/PromocodeSection"
 import {APP_NAME, PROMOCODE_TEXT} from "@/shared/constants/constants"
 import {MainPageGrid} from "./components/GridSection/GridSection" 

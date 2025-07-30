@@ -10,15 +10,13 @@ interface Props extends BaseComponent {
 }
 
 export const ProductList: FC<Props> = ({ testId = 'product-list', products }) => {
-   if (!products) return <div>Loading...</div>;
-
   return (
     <div className="product-list" data-testid={testId}>
       <Row
         gutter={[24, 24]}
         className="row"
       >
-        {products.map(product => (
+        {products?.map(product => (
           <Col
             key={product.id}
             xs={24}
