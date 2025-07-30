@@ -6,7 +6,7 @@ import { Product } from "@/modules/products/types/product-types";
 import './ProductList.scss'
 
 interface Props extends BaseComponent {
-  products: Product[] | null
+  products: Product[] | undefined
 }
 
 export const ProductList: FC<Props> = ({ testId = 'product-list', products }) => {
