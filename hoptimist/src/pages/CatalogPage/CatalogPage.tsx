@@ -7,11 +7,12 @@ import {AllProductsPesponse} from "@/modules/products/types/product-types"
 import {AppPagination} from "@/shared/components/ui/AppPagination/AppPagination"
 import {useCatalogPage} from "./hooks/useCatalogPage"
 import { AppSkeleton } from '@/shared/components/ui/AppSkeleton/AppSkeleton';
+import {AppEmpty} from "@/shared/components/ui/AppEmpty/AppEmpty"
 
 export const CatalogPage: FC = () => {
   const { currentPage, handlePageChange } = useCatalogPage()
   const fetchCatalogProducts = useCallback(() => getCatalogProducts(currentPage), [currentPage])
-  const {data: productsResponse, isLoading} = useRequest<AllProductsPesponse>(fetchCatalogProducts)
+  const {data: productsResponse, isLoading, isError} = useRequest<AllProductsPesponse>(fetchCatalogProducts)
   const allProducts = productsResponse?.data
   const catalogPagination = productsResponse?.pagination
 
@@ -20,9 +21,11 @@ export const CatalogPage: FC = () => {
   }, [currentPage])
     
   return (
-    <>
+     <>
       {isLoading ? (
         <AppSkeleton />
+      ) : isError ? (
+        <AppEmpty />
       ) : (
         <Flex vertical gap="middle">
           <ProductList products={allProducts} />
