@@ -3,11 +3,11 @@ import type { BaseComponent } from "@/shared/types/common-types";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { Flex, Grid, Row, Col } from "antd";
 import { useNavigate } from "react-router-dom";
-import { AppButton } from "../AppButton/AppButton";
-import { AppTitle } from "../AppTitle/AppTitle";
+import { AppButton } from "../../../../shared/components/ui/AppButton/AppButton";
+import { AppTitle } from "../../../../shared/components/ui/AppTitle/AppTitle";
 import { APP_PATHS } from "@/kernel/router/route-paths";
 import { Product } from "@/modules/products/types/product-types";
-import { ProductCard } from "@/shared/components/ui/ProductCard/ProductCard";
+import { ProductCard } from "@/modules/products/components/ProductCard/ProductCard";
 
 interface Props extends BaseComponent {
   title: string;

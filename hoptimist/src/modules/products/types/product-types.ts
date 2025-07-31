@@ -1,3 +1,4 @@
+import { Pagination } from 'antd';
 import { Category } from "../../categories/types/category-types";
 import { Brewery } from "../../breweries/types/brewery-types";
 
@@ -20,4 +21,19 @@ export interface Product {
   price: number;
   title: string;
   updatedAt: string;
+}
+
+export interface Pagination {
+  limit: number;
+  page: number;
+  total: number;
+  totalPages: number;
+}
+
+export interface AllProductsPesponse {
+  success: boolean;
+  data: Product[];
+  message: string;
+  pagination: Pagination;
+  statusCode: number
 }
