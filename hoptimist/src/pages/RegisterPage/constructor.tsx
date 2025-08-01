@@ -1,4 +1,5 @@
 import {PersonalInfo} from "./components/PersonalInfo/PersonalInfo"
+import {Credentials} from "./components/Credentials/Credentials"
 
 export const steps = [
   {
@@ -15,6 +16,6 @@ export const steps = [
   },
   {
     title: 'Finish',
-    content: 'Last-content',
+    content: <Credentials />,
   },
 ];
