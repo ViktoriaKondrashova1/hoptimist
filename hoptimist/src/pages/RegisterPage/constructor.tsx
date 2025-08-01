@@ -1,7 +1,9 @@
+import {PersonalInfo} from "./components/PersonalInfo/PersonalInfo"
+
 export const steps = [
   {
     title: 'Personal Info',
-    content: 'First-content',
+    content: <PersonalInfo />,
   },
   {
     title: 'Shipping',
