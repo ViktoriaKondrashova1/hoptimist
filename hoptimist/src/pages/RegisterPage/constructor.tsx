@@ -1,5 +1,6 @@
 import {PersonalInfo} from "./components/PersonalInfo/PersonalInfo"
 import {Credentials} from "./components/Credentials/Credentials"
+import {Address} from "./components/Address/Address"
 
 export const steps = [
   {
@@ -8,11 +9,11 @@ export const steps = [
   },
   {
     title: 'Shipping',
-    content: 'Second-content',
+    content: <Address />,
   },
   {
     title: 'Billing',
-    content: 'Last-content',
+    content: <Address />,
   },
   {
     title: 'Finish',
