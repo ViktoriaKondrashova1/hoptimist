@@ -9,14 +9,12 @@ interface Props extends BaseComponent {}
 export const PersonalInfo: FC<Props> = ({testId = "personal-info"}) => {
   return (
     <Card data-testid={testId} style={{ maxWidth: 400, margin: "auto" }}>
-      <Form name="personal-info" layout="vertical">
         <Form.Item name="first-name" label="First Name" rules={firstNameValidationRules}>
           <AppInput placeholder="First Name"/>
         </Form.Item>
         <Form.Item name="last-name" label="Last Name" rules={lastNameValidationRules}>
           <AppInput placeholder="Last Name" />
         </Form.Item>
-      </Form>
     </Card>
   )
 };

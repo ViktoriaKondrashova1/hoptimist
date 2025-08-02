@@ -10,7 +10,6 @@ interface Props extends BaseComponent {}
 export const Address: FC<Props> = ({testId = "address"}) => {
   return (
     <Card data-testid={testId} style={{ maxWidth: 400, margin: "auto" }}>
-      <Form name="credentials" layout="vertical">
         <Flex gap="middle">
           <Form.Item name="country" label="Country" style={{ flex: 1 }} rules={countryValidationRules}>
             <Select
@@ -37,7 +36,6 @@ export const Address: FC<Props> = ({testId = "address"}) => {
             <AppInput placeholder="11217"/>
           </Form.Item>
         </Flex>
-      </Form>
       <Checkbox>Mark as primary</Checkbox>
     </Card>
   )

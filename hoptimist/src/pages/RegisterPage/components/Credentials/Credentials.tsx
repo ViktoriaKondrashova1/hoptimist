@@ -9,7 +9,6 @@ interface Props extends BaseComponent {}
 export const Credentials: FC<Props> = ({testId = "credentials"}) => {
   return (
     <Card data-testid={testId} style={{ maxWidth: 400, margin: "auto" }}>
-      <Form name="credentials" layout="vertical">
         <Form.Item name="email" label="Email" rules={emailValidationRules}>
           <AppInput placeholder="Email"/>
         </Form.Item>
@@ -19,7 +18,6 @@ export const Credentials: FC<Props> = ({testId = "credentials"}) => {
         <Form.Item name="confirm-password" label="Confirm Password" rules={passwordValidationRules}>
           <AppInput placeholder="Password" />
         </Form.Item>
-      </Form>
     </Card>
   )
 };
