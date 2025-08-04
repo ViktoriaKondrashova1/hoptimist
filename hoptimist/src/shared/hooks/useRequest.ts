@@ -35,8 +35,6 @@ export function useRequest<T>(request: RequestFunction<T>): RequestResult<T> {
     }
   }, [request])
 
-  console.log(isError)
-
   useEffect(() => {
     executeRequest().catch(() => {
       throw new Error('Request failed')
